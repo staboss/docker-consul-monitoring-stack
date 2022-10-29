@@ -1,0 +1,16 @@
+{
+  "service": {
+    "name": "victoria-metrics",
+    "address": "victoria-metrics",
+    "port": 8428,
+    "tags": ["monitoring"],
+    "checks": [
+      {
+        "id": "metrics",
+        "name": "VictoriaMetrics Server Storage Metrics",
+        "http": "http://victoria-metrics:8428/metrics",
+        "interval": "10s"
+      }
+    ]
+  }
+}
